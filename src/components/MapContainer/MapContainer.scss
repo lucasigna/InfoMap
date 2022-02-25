@@ -1,0 +1,12 @@
+.mapContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    figure.worldmap__figure-container{
+
+        background-color: transparent !important;
+    }
+    svg{
+        background-color: transparent;
+    }
+}
