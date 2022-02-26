@@ -2,7 +2,7 @@
 
 [InfoMap](https://infomap.vercel.app/) es un sitio web de mapas interactivos en el cual se puede obtener información sobre todos los países del mundo.
 
-![](https://github.com/lucasigna/proyecto-final-react/blob/master/preview.gif)
+![](https://github.com/lucasigna/InfoMap/blob/main/preview.gif)
 
 ### Recursos utilizados
 
