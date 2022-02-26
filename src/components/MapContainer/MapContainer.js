@@ -25,18 +25,26 @@ const stylingFunction = ({countryValue,minValue,maxValue,country,color,}) => {
 export const MapContainer = () => {
 
     const {togglePopUp} = useContext(PopUpContext)
+    const [width,setWidth] = useState(window.innerWidth-20)
 
     const onClick = (e) => {
         const code = e.countryCode.toLowerCase()
         togglePopUp(code)
     }
 
+    console.log(width);
+    const handleResize = () => {
+        setWidth(window.innerWidth-20)
+    }
+
+    window.addEventListener("resize", handleResize)
+
     return (
         <div className="mapContainer">
             
                 <WorldMap
                     value-suffix="people"
-                    size={800}
+                    size={width}
                     data={data}
                     styleFunction={stylingFunction}
                     onClickFunction={onClick}

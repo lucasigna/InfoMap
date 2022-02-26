@@ -3,6 +3,12 @@ import './CountryInfoPopUp.scss'
 import { getDataCountry } from './../../services/services';
 import { PopUpContext } from '../../context/PopUpContext';
 import CircularProgress from '@mui/material/CircularProgress';
+import { Currencies } from './Currencies';
+import { Languages } from './Languages';
+import { Timezones } from './Timezones';
+import { giveFormatToNumbers } from '../../helpers/helpers';
+import { Continents } from './Continents';
+import { GiniCoefficient } from './GiniCoefficient';
 
 export const CountryInfoPopUp = () => {
 
@@ -17,11 +23,22 @@ export const CountryInfoPopUp = () => {
         <div className="countryInfoPopUpContainer" onClick={togglePopUp}>
             {countryData ? 
             <div className="countryInfoPopUp">
-                <img className="countryFlag" src={require(`../../assets/${countryCode}.png`)} alt="bandera"/>
-                <p>{countryData.name.common}</p>
-                <p>Population: {countryData.population} habitantes</p>
-                <p>Area: {countryData.area} Km<sup>2</sup></p>
-                <p>Capital: {countryData.capital}</p>
+                <div>
+                    <img className="countryFlag" src={require(`../../assets/${countryCode}.png`)} alt="bandera"/>
+                    <p className="countryName">{countryData.name.common}</p>
+                </div>
+                <div>
+                <p>Population: {giveFormatToNumbers(countryData.population)} inhabitants</p>
+                <p>Area: {giveFormatToNumbers(countryData.area)} Km<sup>2</sup></p>
+                <p>Capital/s: {countryData.capital.join(', ')}</p>
+                <p>Region: {countryData.region}</p>
+                <p>Subregion: {countryData.subregion}</p>
+                </div>
+                <Languages data={countryData.languages}/>
+                <Currencies data={countryData.currencies}/>
+                <Timezones data={countryData.timezones}/>
+                <Continents data={countryData.continents}/>
+                <GiniCoefficient data={countryData.gini}/>
             </div>
             :
             <CircularProgress disableShrink />

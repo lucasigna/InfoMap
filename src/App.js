@@ -2,12 +2,14 @@ import { BrowserRouter,Route,Routes,Navigate } from 'react-router-dom'
 import './App.scss';
 import { MapContainer } from './components/MapContainer/MapContainer';
 import { CountryInfoPopUp } from './components/CountryInfoPopUp/CountryInfoPopUp';
-import { useContext } from 'react';
+import { useContext, useState } from 'react';
 import { PopUpContext } from './context/PopUpContext';
+import { FloatingButtonHome } from './components/FloatingButtonHome/FloatingButtonHome';
+import { MapsMenuContainer } from './components/MapsMenuContainer/MapsMenuContainer';
 
 function App() {
 
-  const {displayPopUp} = useContext(PopUpContext)
+  const {displayPopUp,displayMenu} = useContext(PopUpContext)
 
   return (
     <BrowserRouter>
@@ -20,6 +22,8 @@ function App() {
         </Routes>
 
         {displayPopUp && <CountryInfoPopUp/>}
+        {displayMenu && <MapsMenuContainer/>}
+        <FloatingButtonHome/>
     </BrowserRouter>
   );
 }

@@ -17,13 +17,121 @@
     -webkit-backdrop-filter: blur(5px);
     .countryInfoPopUp{
         background-color: transparent;
-        width: 50vw;
-        height: 50vh;
+        width: 70vw;
+        height: 70vh;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        overflow: auto;
+        .countryName{
+            font-size: 25px;
+            font-weight: bold;
+        }
         .countryFlag{
             border-radius: 10px;
         }
         p{
             color: white;
+            margin: 5px 0;
+            font-weight: 300;
         }
     }
+}
+
+.currenciesContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    grid-column: 2/3;
+    .currencyContainer{
+        border: 1px solid white;
+        border-radius: 10px;
+        display: flex;
+        margin: 5px 0;
+        margin-left: 5px;
+        p{
+            margin: 7px 10px;
+        }
+    }
+}
+
+.languagesContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    grid-column: 1/2;
+    div{
+        display: flex;
+        flex-flow: row wrap;
+        .lang{
+            border: 1px solid white;
+            border-radius: 10px;
+            padding: 7px 10px;
+            margin: 5px;
+        }
+    }
+
+}
+
+.timezonesContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    grid-column: 1/2;
+    div{
+        display: flex;
+        flex-flow: row wrap;
+        .time{
+            border: 1px solid white;
+            border-radius: 10px;
+            padding: 7px 10px;
+            margin: 5px;
+        }
+    }
+
+}
+
+.continentsContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    grid-column: 2/3;
+    div{
+        display: flex;
+        flex-flow: row wrap;
+        .continent{
+            border: 1px solid white;
+            border-radius: 10px;
+            padding: 7px 10px;
+            margin: 5px;
+        }
+    }
+
+}
+
+.giniContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    grid-column: 1/2;
+    .ginis{
+        border: 1px solid white;
+        border-radius: 10px;
+        display: flex;
+        margin: 5px 0;
+        margin-left: 5px;
+        p{
+            margin: 7px 10px;
+        }
+    }
+}
+
+@media only screen and (max-width: 700px) {
+
+    .countryInfoPopUpContainer{
+        .countryInfoPopUp{
+            display: flex;
+            flex-direction: column;
+        }
+    }
+
 }

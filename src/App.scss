@@ -14,3 +14,29 @@ body{
     margin: 10px;
   }
 }
+
+/* width */
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: $colorAzulFondo;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: white;
+  border-radius: 10px;       
+  border: 3px solid $colorAzulFondo;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+.toggle{
+  background-color: red;
+}
