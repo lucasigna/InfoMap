@@ -8,7 +8,7 @@ export const FloatingButtonHome = () => {
 
   return (
       <button onClick={toggleMenu}>
-        Ver mapas
+        See maps
       </button>
   )
 }

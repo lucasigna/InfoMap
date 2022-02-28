@@ -32,7 +32,6 @@ export const MapContainer = () => {
         togglePopUp(code)
     }
 
-    console.log(width);
     const handleResize = () => {
         setWidth(window.innerWidth-20)
     }

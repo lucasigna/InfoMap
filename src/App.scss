@@ -40,3 +40,11 @@ body{
 .toggle{
   background-color: red;
 }
+
+.navLinkH1{
+  text-decoration: none;
+  z-index: 5;
+  h1{
+    z-index: 5;
+  }
+}
